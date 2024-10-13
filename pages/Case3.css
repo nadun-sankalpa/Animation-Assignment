@@ -1,45 +1,69 @@
 body{
-    margin: 0;
+  margin: 0;
 }
-
 .box{
-    height: 150px;
-    width: 300px;
-    background-color: blue ;
-    border-radius: 20px;
-    position: absolute;
-    animation: up-down 7s linear infinite 0s;
+  height: 100px;
+  width: 175px;
+  background-color: blue;
+  border-radius: 12px;
+  position: absolute;
+
+  animation: go-around 8s linear 0s infinite;
+
 }
-@keyframes up-down {
-0% {
-  top: 0;
-  left: 0;
-  ransform: rotate(180deg) ;
+@keyframes go-around {
+  0%{
+      top: 10px;
+      left: 0;
+      
+  }
+  12.5%{
+      top: 10px;
+      left: calc(100% - 175px);
+      background-color: yellow;
+      transform: rotate(180deg);
+  }
+  25%{
+      top: calc(100% - 135px);
+      left: calc(100% - 175px);
+      background-color: red;
+      transform: rotate(360deg);
+  }
+  37.5%{
+      top: calc(100% - 135px);
+      left: 0;
+      background-color: violet;
+      transform: rotate(180deg);
+  }
+  50%{
+      top: 10px;
+      left: 0;
+      background-color: orange;
+      transform: rotate(360deg);
+  }
+  62.5%{
+      top: calc(100% - 100px);
+      left: 0;
+      background-color: violet;
+      transform: rotate(180deg);
+  }
+  75%{
+      top: calc(100% - 135px);
+      left: calc(100% - 175px);
+      background-color: red;
+      transform: rotate(360deg);
+  }
+  87.5%{
+      top: 10px;
+      left: calc(100% - 175px);
+      background-color: yellow;
+      transform: rotate(180deg);
+  }
+  100%{
+      top: 10px;
+      left: 0;
+      background-color: blue;
+      transform: rotate(0deg);
+  }
   
-}
-25% {
-  top: 0;
-  left: calc(100% - 200px);
-  background-color: yellow;
-  transform: rotate(360deg);
-}
-50% {
-  top: calc(100% - 200px);
-  left: calc(100% - 200px);
-  transform: rotate(-360deg);
-  background-color: orangered;
- 
-}
-75% {
-   top: calc(100% - 200px);
-   left: 0;
-   background-color: rgb(235, 36, 69);
-   
-}
-100% {
-  top: 0;
-  left: 0;
-  transform: rotate(360deg);
- 
-}
 }
